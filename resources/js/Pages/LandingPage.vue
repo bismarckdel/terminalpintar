@@ -7,9 +7,10 @@
           <a href="#kegiatan" class="text-gray-600 hover:text-green-700">Kegiatan</a>
           <a href="#tentang" class="text-gray-600 hover:text-green-700">Tentang Kami</a>
           <a href="#kontak" class="text-gray-600 hover:text-green-700">Kontak</a>
-          <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
+          <router-link to="/admin" class="text-gray-600 hover:text-green-700">Admin</router-link>
+          <router-link to="/admin" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-decoration-none">
             Login
-          </button>
+          </router-link>
         </div>
         </div>
     </nav>

@@ -9,6 +9,7 @@ class DatabaseSeeder extends Seeder {
             RoleSeeder::class,
             UserSeeder::class,
             BeritaSeeder::class,
+            AdminUserSeeder::class,
         ]);
     }
 }
