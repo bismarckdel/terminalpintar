@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\Api\BeritaController;
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
 // Rute "Catch-all" untuk SPA
