@@ -28,11 +28,21 @@
     Route::post('/admin/students', [StudentController::class, 'store']);
     Route::get('/admin/students/stats', [StudentController::class, 'getStats']);
 
+    Route::prefix('admin')->group(function () {
+    Route::get('users', [UserController::class, 'index']);
+    Route::post('users', [UserController::class, 'store']);
+    Route::get('users/stats', [UserController::class, 'stats']);
+    Route::put('users/{id}', [UserController::class, 'update']);
+    Route::delete('users/{id}', [UserController::class, 'destroy']);
+});
+
     Route::get('/admin/berita', [BeritaController::class, 'index']);
     Route::post('/admin/berita', [BeritaController::class, 'store']);
+    Route::get('/admin/berita/stats', [BeritaController::class, 'getStats']);    
+    Route::delete('/admin/berita/{id}', [BeritaController::class, 'destroy']);
 
-    Route::get('/admin/users', [UserController::class, 'index']);
-    Route::post('/admin/users', [UserController::class, 'store']);
+    // Route::get('/admin/users', [UserController::class, 'index']);
+    // Route::post('/admin/users', [UserController::class, 'store']);
 
     // Dashboard endpoints
     Route::get('/admin/dashboard-stats', [DashboardController::class, 'getStats']);
